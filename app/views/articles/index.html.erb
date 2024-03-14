@@ -1,6 +1,24 @@
 <h1>Look here</h1>
 
+<table>
+<thead>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Action</th>
+  </tr>
+</thead>
+<tbody>
 <% @articles.each do |article| %>
-  <p> <%= article.id %> )   <strong>Title:</strong>  <%= article.title %></p>
-  <p><strong>Description:</strong> <%= article.description %></p>
+<tr>
+<td> <%= article.id %></td>
+<td> <%= article.title %></td>
+<td> <%= article.description %></td>
+<td> Action #<%= article.id %> </td>
+ 
+</tr>
 <% end %>
+</tbody>
+
+</table>
