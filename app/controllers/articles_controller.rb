@@ -4,7 +4,6 @@ class ArticlesController < ApplicationController
     end
 
     def show
-        byebug
         @article = Article.find(params[:id])
         
     end
