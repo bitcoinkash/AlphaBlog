@@ -6,7 +6,7 @@
     <th>Id</th>
     <th>Title</th>
     <th>Description</th>
-    <th>Action</th>
+    <th colspan = '3'>Action</th>
   </tr>
 </thead>
 <tbody>
@@ -15,10 +15,15 @@
 <td> <%= article.id %></td>
 <td> <%= article.title %></td>
 <td> <%= article.description %></td>
-<td> Action #<%= article.id %> </td>
+<td> <%= link_to 'Edit', edit_article_path(article) %> </td>
+
+<td> <%= link_to 'Show', article_path(article) %> </td>
+<td>  <%= link_to 'Delete', article_path(article), data: { turbo_method: :delete, turbo_confirm: 'Are you sure you want to delete this article?' } %> </td>
+
  
 </tr>
 <% end %>
 </tbody>
-
 </table>
+<br>
+<%= link_to 'New Article', new_article_path %>
